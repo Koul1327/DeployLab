@@ -1,0 +1,9 @@
+{
+  "name": "deploylab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Учебная платформа для сборки и развёртывания приложений",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
