@@ -20,6 +20,18 @@ const server = createServer((request, response) => {
     return;
   }
 
+  if (request.method === "GET" && request.url === "/about"){
+    response.writeHead(200, { "content-type": "application/json; charset=utf-8" });
+    response.end(
+      JSON.stringify({
+        name: "DeployLab",
+        version: "0.1.0",
+        runtime: "Node.js",
+      })
+    );
+    return;
+  }
+
   response.writeHead(404, { "content-type": "application/json; charset=utf-8" });
   response.end(JSON.stringify({ error: "Not found" }));
 });
